@@ -1,10 +1,42 @@
- 
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-     <script src="fSelect.js"></script>
+<!DOCTYPE html>
+<html>
 
-<link rel="stylesheet" href="fSelect.css">
+<head>
+
+  <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script src="//cdn.bootcss.com/select2/4.0.3/js/select2.min.js"></script>
+    <link href="//cdn.bootcss.com/select2/4.0.3/css/select2.min.css" rel="stylesheet">
+	
+
+	    <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	 
+	
  
- <select class="demo" multiple="multiple">
+     <script src="http://www.freejs.net/demo/524/fSelect.js"></script>
+<link rel="stylesheet" href="http://www.freejs.net/demo/524/fSelect.css">
+
+</head>
+
+<body>
+
+   <select id="select2_sample" name="sample" style="width:75%" multiple="multiple"></select>	 
+
+
+</body>
+ <script>
+      $(document).ready(function(){
+
+        var data = [{id: 0, text: 'apple'}, {id: 1, text: 'banana'}, {id: 2, text: 'pear'}];//下拉列表中的数据项
+
+        $("#select2_sample").select2({
+            data: data
+        });//启动select2
+
+    });  
+</script>
+
+
+<select class="demo" multiple="multiple" id="demos">
     <optgroup label="Languages">
         <option value="cp">C++</option>
         <option value="cs">C#</option>
@@ -18,12 +50,18 @@
         <option value="jsp">JSP</option>
     </optgroup>
 </select>
- 
+
+
 <script>
 $(function() {
         $('.demo').fSelect();
+		
 		$('.fs-label').html('请选择');
+		
     });
-</script>
+ </script>
 
- 
+
+
+
+
